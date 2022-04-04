@@ -1,0 +1,41 @@
+service_name: me.techclips
+default:
+  memorysize: 128
+  timeout: 60
+alias:
+  prod: prod
+  stg: stg
+version:
+  latest: $LATEST
+s3:
+  bucket_name: lambda.zip-files
+add_function:
+  role: arn:aws:iam::115107702932:role/lambda-dynamo
+  runtime: nodejs14.x
+  handler: index.js
+  s3_key: me.techclips/sample.zip
+environment:
+  Variables:
+    PARAM: TEST
+layers:
+  - arn:aws:lambda:ap-northeast-1:115107702932:layer:tech_util:180
+  - arn:aws:lambda:ap-northeast-1:115107702932:layer:tech_node_modules:7
+  - arn:aws:lambda:ap-northeast-1:943013980633:layer:SentryNodeServerlessSDK:26
+functions:
+  - is_set: true
+    name: test_no
+  - is_set: true
+    name: test_no1
+  - is_set: true
+    name: test_no2
+  - is_set: true
+    name: test_no3
+  - is_set: true
+    name: test_no4
+  - is_set: true
+    name: test_no8
+  - is_set: true
+    name: test_no9
+  - is_set: true
+    name: test_function
+is_set_all: true
