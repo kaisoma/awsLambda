@@ -8,20 +8,9 @@ alias:
 version:
   latest: $LATEST
 s3:
-  bucket_name: lambda.zip-files
+  bucketName: lambda.zip-files
 add_function:
   role: arn:aws:iam::115107702932:role/lambda-dynamo
   runtime: nodejs14.x
   handler: index.js
   s3_key: me.techclips/sample.zip
-environment:
-  Variables:
-    PARAM: TEST
-layers:
-  - arn:aws:lambda:ap-northeast-1:115107702932:layer:test_util:1
-functions:
-  - is_set: true
-    name: test_function
-  - is_set: true
-    name: test_no10
-is_set_all: true

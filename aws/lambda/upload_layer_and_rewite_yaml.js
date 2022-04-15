@@ -67,7 +67,8 @@ module.exports.handler  = async (layerName, param) => {  // 関数を作成
         continue;
       }
       const regex = /:\d*$/i;
-      data.layers[no] = param.layers[no].replace(regex, `:${lambdalayerVersion}`);
+      console.log(no);
+      param.layers[no] = param.layers[no].replace(regex, `:${lambdalayerVersion}`);
     }
     process.chdir('..');
   }

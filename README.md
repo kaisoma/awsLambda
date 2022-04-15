@@ -14,10 +14,17 @@ AWS Lambdaへの関数追加・レイヤーの設定・デプロイなどを1コ
 
 # 使えるようにするまで
 1. ライブラリのインストール
-```shell
- $npm install
-```
+
 package.json内に記載しているライブラリ（aws-sdk, js-yaml）がインストールされます
 
-2. 
+```shell
+ % npm install
+```
+3. AWS S3に「コードアップロード用」バケットを作成する。
+
+4. 先程のバケット内に「プロジェクト用ディレクトリ」を作成し本リポジトリ内の「sample.zip」ファイルを配置する。
+
+5. param.yamlのadd_function.s3_keyを、「3.」で設置したファイルを指定する。 
+6. AWS IAM上で、「S3」と「DynamoDB」と「Lambda」にアクセス権のあるロールを作成する。 
+7. そのロールのarnをparam.yamlのadd_function.roleに設定する。
 

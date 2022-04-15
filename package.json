@@ -1,0 +1,24 @@
+{
+  "name": "awslambda",
+  "version": "1.0.0",
+  "description": "AWS Lambdaへの関数追加・レイヤーの設定・デプロイなどを1コマンドで実行します。",
+  "main": "aws/command.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaisoma/awsLambda.git"
+  },
+  "author": "相馬海一郎 <kai@sooma.xsrv.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaisoma/awsLambda/issues"
+  },
+  "homepage": "https://github.com/kaisoma/awsLambda#readme",
+  "dependencies": {
+    "archiver": "^5.3.0",
+    "aws-sdk": "^2.1023.0",
+    "js-yaml": "^4.1.0"
+  }
+}
